@@ -84,7 +84,7 @@ function App() {
     if (number===!"0"){
       setRunningTotal(parseFloat(previousTotal) / parseFloat(number));
     } else {
-      setRunningTotal(parseFloat(previousTotal))
+      setRunningTotal("undefined")
     }
     
   }

@@ -50,6 +50,6 @@ describe("Calculator", () => {
     cy.get('#operator-divide').click();
     cy.get('#number0').click();
     cy.get('#operator-equals').click();
-    cy.get('#running-total').should('contain', '8')
+    cy.get('#running-total').should('contain', 'undefined')
   }) 
 })
