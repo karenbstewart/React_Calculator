@@ -24,8 +24,32 @@ describe("Calculator", () => {
     cy.get('#operator-equals').click();
     cy.get('#running-total').should('contain', '11')
   })
+  it('negative numbers', () => {
+    cy.get('#number4').click();
+    cy.get('#operator-subtract').click();
+    cy.get('#number6').click();
+    cy.get('#operator-equals').click();
+    cy.get('#running-total').should('contain', '-2')
+  }) 
 
-  it('here', () => {
-    
+  it('adding decimal numbers', () => {
+    cy.get('#number2').click();
+    cy.get('#decimal').click();
+    cy.get('#number6').click();
+    cy.get('#operator_add').click();
+    cy.get('#number3').click();
+    cy.get('#decimal').click();
+    cy.get('#number8').click();
+    cy.get('#operator-equals').click();
+    cy.get('#running-total').should('contain', '6.4')
+
   })
+
+  it('divide by zero', () => {
+    cy.get('#number8').click();
+    cy.get('#operator-divide').click();
+    cy.get('#number0').click();
+    cy.get('#operator-equals').click();
+    cy.get('#running-total').should('contain', '8')
+  }) 
 })
