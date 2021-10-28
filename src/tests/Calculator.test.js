@@ -56,5 +56,17 @@ describe('Calculator', () => {
     equals.simulate('click');
     expect(runningTotal.text()).toEqual('15');
   })
+
+  it('should concatinate multiple button clicks', () => {
+    const runningTotal = container.find('#running-total');
+    const button3 = container.find('#number3');
+    const button5 = container.find('#number5');
+    button3.simulate('click');
+    button5.simulate('click');
+    button3.simulate('click');
+    button5.simulate('click');
+    button5.simulate('click');
+    expect(runningTotal.text()).toEqual('35355');
+  })
 })
 
