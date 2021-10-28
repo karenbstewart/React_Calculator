@@ -14,4 +14,18 @@ describe("Calculator", () => {
     cy.get('#operator-equals').click();
     cy.get('#running-total').should('contain', '6')
   })
+
+  it('do multiple operators chain together', () => {
+    cy.get('#number2').click();
+    cy.get('#operator_add').click();
+    cy.get('#number4').click();
+    cy.get('#operator_add').click();
+    cy.get('#number5').click();
+    cy.get('#operator-equals').click();
+    cy.get('#running-total').should('contain', '11')
+  })
+
+  it('here', () => {
+    
+  })
 })

@@ -85,6 +85,6 @@ describe('Calculator', () => {
     clear.simulate('click');
     equals.simulate('click');
     expect(runningTotal.text()).toEqual('5');
-  })
+  }) 
 })
 
